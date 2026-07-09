@@ -1,0 +1,41 @@
+[
+    {
+        "id":"lord_of_the_mysteries",
+
+        "title":"Lord of the Mysteries",
+
+        "author":"Cuttlefish That Loves Diving",
+
+        "status":"completed",
+
+        "cover":"",
+
+        "description":
+        "A Victorian-era mystery fantasy world involving Beyonders, pathways, and ancient powers.",
+
+
+        "genres":[
+            "Fantasy",
+            "Mystery",
+            "Steampunk"
+        ],
+
+
+        "featured":true,
+
+
+        "relations":{
+
+            "characters":[
+                "klein_moretti"
+            ],
+
+
+            "organizations":[
+                "tarot_club"
+            ]
+
+        }
+
+    }
+]

@@ -1,0 +1,507 @@
+/* ==========================================================
+   CHARACTER ATLAS
+   RESPONSIVE SYSTEM
+   ----------------------------------------------------------
+   Breakpoints
+   Desktop
+   Tablet
+   Mobile
+========================================================== */
+
+
+/* ==========================================================
+   LARGE DESKTOP
+   1440px+
+========================================================== */
+
+@media (min-width:1440px){
+
+    :root{
+
+        --container-width:1400px;
+
+    }
+
+
+    #hero h1{
+
+        font-size:5.5rem;
+
+    }
+
+
+}
+
+
+/* ==========================================================
+   LAPTOP
+   1200px
+========================================================== */
+
+@media (max-width:1200px){
+
+
+    :root{
+
+        --container-padding:20px;
+
+    }
+
+
+
+    .grid-4{
+
+
+        grid-template-columns:
+
+            repeat(3,1fr);
+
+
+    }
+
+
+
+    #navbar{
+
+
+        gap:1.2rem;
+
+
+    }
+
+
+
+    #nav-menu{
+
+
+        gap:1.2rem;
+
+
+    }
+
+
+}
+
+
+
+/* ==========================================================
+   TABLET
+   992px
+========================================================== */
+
+@media (max-width:992px){
+
+
+    /* ------------------
+       Container
+    ------------------ */
+
+    .container{
+
+
+        width:
+
+            calc(100% - 40px);
+
+
+    }
+
+
+
+    /* ------------------
+       Grid
+    ------------------ */
+
+
+    .grid-4{
+
+
+        grid-template-columns:
+
+            repeat(2,1fr);
+
+
+    }
+
+
+    .grid-3{
+
+
+        grid-template-columns:
+
+            repeat(2,1fr);
+
+
+    }
+
+
+
+    /* ------------------
+       Navbar
+    ------------------ */
+
+
+    #navbar{
+
+
+        padding-inline:1rem;
+
+
+    }
+
+
+
+    #search-container{
+
+
+        display:none;
+
+
+    }
+
+
+
+    #nav-menu{
+
+
+        gap:1rem;
+
+
+    }
+
+
+
+    #nav-menu a{
+
+
+        font-size:.9rem;
+
+
+    }
+
+
+
+    /* ------------------
+       Hero
+    ------------------ */
+
+
+    #hero{
+
+
+        min-height:
+
+            85vh;
+
+
+    }
+
+
+
+    #hero h1{
+
+
+        font-size:
+
+            clamp(
+
+                2.5rem,
+
+                8vw,
+
+                4rem
+
+            );
+
+
+    }
+
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+   768px
+========================================================== */
+
+@media (max-width:768px){
+
+
+    :root{
+
+
+        --container-padding:16px;
+
+
+        --section-spacing:4rem;
+
+
+    }
+
+
+
+    /* ------------------
+       Container
+    ------------------ */
+
+
+    .container{
+
+
+        width:
+
+            calc(100% - 32px);
+
+
+    }
+
+
+
+    /* ------------------
+       Grid
+    ------------------ */
+
+
+    .grid-2,
+
+    .grid-3,
+
+    .grid-4,
+
+
+    .card-grid,
+
+    .feature-grid{
+
+
+        grid-template-columns:
+
+            1fr;
+
+
+    }
+
+
+
+    /* ------------------
+       Header
+    ------------------ */
+
+
+    #navbar{
+
+
+        height:64px;
+
+
+        border-radius:
+
+            var(--radius-lg);
+
+
+    }
+
+
+
+    #logo-text{
+
+
+        font-size:1.1rem;
+
+
+    }
+
+
+
+    #nav-menu{
+
+
+        display:none;
+
+
+    }
+
+
+
+    /*
+
+       Mobile menu button
+       will be added later
+
+       by JavaScript
+
+    */
+
+
+
+    /* ------------------
+       Sections
+    ------------------ */
+
+
+    section{
+
+
+        padding-block:
+
+            4rem;
+
+
+    }
+
+
+
+    /* ------------------
+       Hero
+    ------------------ */
+
+
+    #hero{
+
+
+        padding-top:5rem;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+    #hero p{
+
+
+        font-size:1rem;
+
+
+    }
+
+
+
+    #hero-actions{
+
+
+        flex-direction:
+
+            column;
+
+
+        width:100%;
+
+
+    }
+
+
+
+}
+
+
+
+/* ==========================================================
+   SMALL MOBILE
+   480px
+========================================================== */
+
+@media (max-width:480px){
+
+
+
+    #navbar{
+
+
+        width:
+
+            calc(100% - 24px);
+
+
+        margin-top:.75rem;
+
+
+    }
+
+
+
+    #hero h1{
+
+
+        font-size:2.3rem;
+
+
+    }
+
+
+
+    .section-title{
+
+
+        font-size:2rem;
+
+
+    }
+
+
+
+}
+
+
+
+/* ==========================================================
+   EXTRA SMALL DEVICE
+   360px
+========================================================== */
+
+@media (max-width:360px){
+
+
+
+    #logo-text{
+
+
+        font-size:1rem;
+
+
+    }
+
+
+
+    #hero h1{
+
+
+        font-size:2rem;
+
+
+    }
+
+
+}
+
+
+
+/* ==========================================================
+   LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height:500px)
+and (orientation:landscape){
+
+
+    #hero{
+
+
+        min-height:
+
+            auto;
+
+
+        padding-block:
+
+            5rem;
+
+
+    }
+
+
+}

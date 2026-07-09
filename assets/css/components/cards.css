@@ -1,0 +1,703 @@
+/* ==========================================================
+   CHARACTER ATLAS
+   CARD COMPONENTS
+   ----------------------------------------------------------
+   Entity Visualization Cards
+   Character
+   Novel
+   Organization
+   Planet
+   Artifact
+   Timeline
+========================================================== */
+
+
+/* ==========================================================
+   BASE ENTITY CARD
+========================================================== */
+
+.entity-card{
+
+
+    position:relative;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    overflow:hidden;
+
+
+    background:
+
+        var(--color-surface);
+
+
+    border:
+
+        1px solid
+
+        var(--color-border);
+
+
+    border-radius:
+
+        var(--radius-lg);
+
+
+    transition:
+
+        var(--transition-normal);
+
+
+}
+
+
+
+/* ==========================================================
+   CARD HOVER
+========================================================== */
+
+.entity-card:hover{
+
+
+    transform:
+
+        translateY(-8px);
+
+
+    border-color:
+
+        rgba(79,195,247,.35);
+
+
+    box-shadow:
+
+
+        0 20px 45px rgba(0,0,0,.45),
+
+
+        0 0 25px rgba(79,195,247,.12);
+
+
+}
+
+
+
+/* ==========================================================
+   CARD IMAGE
+========================================================== */
+
+.card-image{
+
+
+    position:relative;
+
+
+    width:100%;
+
+
+    aspect-ratio:
+
+        16 / 9;
+
+
+    overflow:hidden;
+
+
+    background:
+
+        var(--color-background);
+
+
+}
+
+
+
+.card-image img{
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    transition:
+
+        var(--transition-slow);
+
+
+}
+
+
+
+.entity-card:hover .card-image img{
+
+
+    transform:
+
+        scale(1.08);
+
+
+}
+
+
+
+/* ==========================================================
+   IMAGE OVERLAY
+========================================================== */
+
+.card-image::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+
+        linear-gradient(
+
+            to top,
+
+            rgba(11,15,23,.8),
+
+            transparent
+
+        );
+
+
+}
+
+
+
+/* ==========================================================
+   CARD BODY
+========================================================== */
+
+.card-body{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:1rem;
+
+
+    padding:
+
+        var(--card-padding);
+
+
+}
+
+
+
+/* ==========================================================
+   CARD TITLE
+========================================================== */
+
+.card-title{
+
+
+    font-size:
+
+        var(--text-xl);
+
+
+    font-weight:
+
+        var(--weight-bold);
+
+
+    color:
+
+        var(--color-white);
+
+
+}
+
+
+
+.card-description{
+
+
+    color:
+
+        var(--color-text-secondary);
+
+
+    font-size:
+
+        var(--text-sm);
+
+
+}
+
+
+
+/* ==========================================================
+   CARD META INFORMATION
+========================================================== */
+
+.card-meta{
+
+
+    display:flex;
+
+
+    flex-wrap:wrap;
+
+
+    gap:.5rem;
+
+
+    margin-top:auto;
+
+
+}
+
+
+
+/* ==========================================================
+   CHARACTER CARD
+========================================================== */
+
+.character-card{
+
+
+    composes:
+
+        entity-card;
+
+
+}
+
+
+
+/* Character portrait */
+
+.character-card .card-image{
+
+
+    aspect-ratio:
+
+        3 / 4;
+
+
+}
+
+
+
+.character-info{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:.5rem;
+
+
+}
+
+
+
+/* ==========================================================
+   CHARACTER LEVEL / POWER
+========================================================== */
+
+.character-power{
+
+
+    margin-top:.5rem;
+
+
+    color:
+
+        var(--color-highlight);
+
+
+    font-family:
+
+        var(--font-monospace);
+
+
+    font-size:
+
+        var(--text-sm);
+
+
+}
+
+
+
+/* ==========================================================
+   NOVEL CARD
+========================================================== */
+
+.novel-card{
+
+
+    position:relative;
+
+
+}
+
+
+
+.novel-card .card-image{
+
+
+    aspect-ratio:
+
+        16 / 9;
+
+
+}
+
+
+
+/* ==========================================================
+   ORGANIZATION CARD
+========================================================== */
+
+.organization-card{
+
+
+    border-color:
+
+        rgba(0,229,255,.15);
+
+
+}
+
+
+
+.organization-card:hover{
+
+
+    border-color:
+
+        var(--color-highlight);
+
+
+}
+
+
+
+/* ==========================================================
+   PLANET CARD
+========================================================== */
+
+.planet-card{
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.planet-card .card-image{
+
+
+    aspect-ratio:
+
+        1 / 1;
+
+
+    border-radius:
+
+        50%;
+
+
+}
+
+
+
+/* ==========================================================
+   ARTIFACT CARD
+========================================================== */
+
+.artifact-card{
+
+
+    background:
+
+
+        linear-gradient(
+
+            145deg,
+
+            rgba(20,28,47,.9),
+
+            rgba(11,15,23,.9)
+
+        );
+
+
+}
+
+
+
+.artifact-card:hover{
+
+
+    box-shadow:
+
+
+        0 0 35px rgba(255,213,79,.15);
+
+
+}
+
+
+
+/* ==========================================================
+   TIMELINE CARD
+========================================================== */
+
+.timeline-card{
+
+
+    position:relative;
+
+
+    padding-left:
+
+        2rem;
+
+
+}
+
+
+
+/* timeline line */
+
+.timeline-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:0;
+
+
+    top:0;
+
+
+    height:100%;
+
+
+    width:2px;
+
+
+    background:
+
+        var(--color-primary);
+
+
+}
+
+
+
+/* ==========================================================
+   RELATION CARD
+========================================================== */
+
+.relation-card{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:1rem;
+
+
+}
+
+
+
+/* ==========================================================
+   CARD FOOTER
+========================================================== */
+
+.card-footer{
+
+
+    padding:
+
+
+        0 var(--card-padding)
+
+        var(--card-padding);
+
+
+}
+
+
+
+/* ==========================================================
+   CARD GRID
+========================================================== */
+
+.entity-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+
+        repeat(
+
+            auto-fit,
+
+            minmax(280px,1fr)
+
+        );
+
+
+    gap:
+
+        2rem;
+
+
+}
+
+
+
+/* ==========================================================
+   FEATURED CARD
+========================================================== */
+
+.featured-card{
+
+
+    border:
+
+        1px solid
+
+        rgba(0,229,255,.25);
+
+
+}
+
+
+
+.featured-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+
+        radial-gradient(
+
+            circle at top right,
+
+            rgba(0,229,255,.12),
+
+            transparent 40%
+
+        );
+
+
+}
+
+
+
+/* ==========================================================
+   EMPTY CARD
+========================================================== */
+
+.empty-card{
+
+
+    min-height:250px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    color:
+
+        var(--color-text-secondary);
+
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+
+    .entity-grid{
+
+
+        grid-template-columns:
+
+            1fr;
+
+
+    }
+
+
+
+    .card-body{
+
+
+        padding:
+
+            1.25rem;
+
+
+    }
+
+
+}

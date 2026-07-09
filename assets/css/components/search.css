@@ -1,0 +1,664 @@
+/* ==========================================================
+   CHARACTER ATLAS
+   SEARCH COMPONENT
+   ----------------------------------------------------------
+   Universe Explorer Search Interface
+========================================================== */
+
+
+/* ==========================================================
+   SEARCH WRAPPER
+========================================================== */
+
+.search-box{
+
+
+    position:relative;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    width:100%;
+
+
+}
+
+
+
+/* ==========================================================
+   SEARCH FORM
+========================================================== */
+
+.search-box form{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    width:100%;
+
+
+    gap:.75rem;
+
+
+}
+
+
+
+/* ==========================================================
+   SEARCH INPUT CONTAINER
+========================================================== */
+
+.search-input-wrapper{
+
+
+    position:relative;
+
+
+    flex:1;
+
+
+}
+
+
+
+/* ==========================================================
+   SEARCH INPUT
+========================================================== */
+
+.search-input{
+
+
+    width:100%;
+
+
+    height:52px;
+
+
+    padding:
+
+        0 3.5rem 0 1.25rem;
+
+
+    border-radius:
+
+        var(--radius-pill);
+
+
+    background:
+
+
+        rgba(255,255,255,.05);
+
+
+    border:
+
+        1px solid
+
+        rgba(255,255,255,.12);
+
+
+    color:
+
+        var(--color-white);
+
+
+    backdrop-filter:
+
+        blur(var(--blur-sm));
+
+
+    transition:
+
+        var(--transition-normal);
+
+
+}
+
+
+
+.search-input::placeholder{
+
+
+    color:
+
+        var(--color-text-secondary);
+
+
+}
+
+
+
+.search-input:hover{
+
+
+    border-color:
+
+        rgba(79,195,247,.4);
+
+
+}
+
+
+
+.search-input:focus{
+
+
+    border-color:
+
+        var(--color-primary);
+
+
+    box-shadow:
+
+
+        var(--glow-primary);
+
+
+}
+
+
+
+/* ==========================================================
+   SEARCH ICON
+========================================================== */
+
+.search-icon{
+
+
+    position:absolute;
+
+
+    right:1.25rem;
+
+
+    top:50%;
+
+
+    transform:
+
+        translateY(-50%);
+
+
+    color:
+
+        var(--color-text-secondary);
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+/* ==========================================================
+   SEARCH BUTTON
+========================================================== */
+
+.search-submit{
+
+
+    height:52px;
+
+
+    padding-inline:
+
+        1.5rem;
+
+
+    border-radius:
+
+        var(--radius-pill);
+
+
+    background:
+
+        var(--color-primary);
+
+
+    color:
+
+        #061018;
+
+
+    font-weight:
+
+        var(--weight-semibold);
+
+
+    transition:
+
+        var(--transition-normal);
+
+
+}
+
+
+
+.search-submit:hover{
+
+
+    background:
+
+        var(--color-highlight);
+
+
+    box-shadow:
+
+        var(--glow-highlight);
+
+
+}
+
+
+
+/* ==========================================================
+   SEARCH DROPDOWN
+========================================================== */
+
+.search-results{
+
+
+    position:absolute;
+
+
+    top:
+
+        calc(100% + .75rem);
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    z-index:
+
+        var(--z-dropdown);
+
+
+    padding:.75rem;
+
+
+    background:
+
+
+        rgba(20,28,47,.95);
+
+
+    border:
+
+
+        1px solid
+
+        var(--glass-border);
+
+
+    border-radius:
+
+        var(--radius-lg);
+
+
+    backdrop-filter:
+
+        blur(20px);
+
+
+    box-shadow:
+
+        var(--shadow-lg);
+
+
+}
+
+
+
+/* ==========================================================
+   SEARCH RESULT ITEM
+========================================================== */
+
+.search-result-item{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:1rem;
+
+
+    padding:
+
+        .85rem;
+
+
+    border-radius:
+
+        var(--radius-md);
+
+
+    cursor:pointer;
+
+
+    transition:
+
+        var(--transition-fast);
+
+
+}
+
+
+
+.search-result-item:hover{
+
+
+    background:
+
+        rgba(79,195,247,.08);
+
+
+}
+
+
+
+/* ==========================================================
+   RESULT IMAGE
+========================================================== */
+
+.search-result-image{
+
+
+    width:48px;
+
+
+    height:48px;
+
+
+    border-radius:
+
+        50%;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.search-result-image img{
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+/* ==========================================================
+   RESULT CONTENT
+========================================================== */
+
+.search-result-content{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+.search-result-title{
+
+
+    color:
+
+        var(--color-white);
+
+
+    font-weight:
+
+        var(--weight-semibold);
+
+
+}
+
+
+
+.search-result-type{
+
+
+    font-size:
+
+        var(--text-sm);
+
+
+    color:
+
+        var(--color-text-secondary);
+
+
+}
+
+
+
+/* ==========================================================
+   FILTER CHIPS
+========================================================== */
+
+.search-filters{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    flex-wrap:wrap;
+
+
+    gap:.75rem;
+
+
+    margin-top:1rem;
+
+
+}
+
+
+
+.search-chip{
+
+
+    padding:
+
+        .45rem 1rem;
+
+
+    border-radius:
+
+        var(--radius-pill);
+
+
+    background:
+
+
+        rgba(255,255,255,.05);
+
+
+    border:
+
+        1px solid
+
+        rgba(255,255,255,.10);
+
+
+    color:
+
+        var(--color-text-secondary);
+
+
+    cursor:pointer;
+
+
+    transition:
+
+        var(--transition-normal);
+
+
+}
+
+
+
+.search-chip:hover,
+
+
+.search-chip.active{
+
+
+    color:
+
+        var(--color-background);
+
+
+    background:
+
+        var(--color-primary);
+
+
+    border-color:
+
+        transparent;
+
+
+}
+
+
+
+/* ==========================================================
+   ADVANCED SEARCH PANEL
+========================================================== */
+
+.search-panel{
+
+
+    padding:
+
+        1.5rem;
+
+
+    border-radius:
+
+        var(--radius-xl);
+
+
+    background:
+
+
+        rgba(20,28,47,.75);
+
+
+    border:
+
+        1px solid
+
+        var(--glass-border);
+
+
+    backdrop-filter:
+
+        blur(var(--blur-md));
+
+
+}
+
+
+
+/* ==========================================================
+   SEARCH CATEGORY
+========================================================== */
+
+.search-category{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:.5rem;
+
+
+}
+
+
+
+.search-category label{
+
+
+    color:
+
+        var(--color-text-secondary);
+
+
+    font-size:
+
+        var(--text-sm);
+
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+
+    .search-box form{
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .search-submit{
+
+
+        width:100%;
+
+
+    }
+
+
+
+}

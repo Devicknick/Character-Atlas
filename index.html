@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+    <!-- ==================================================
+         META
+    =================================================== -->
+
+
+    <meta charset="UTF-8">
+
+
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <meta 
+        name="description"
+        content="
+        Character Atlas - A visual universe database
+        for characters, worlds, organizations,
+        artifacts and story events.
+        "
+    >
+
+
+    <title>
+        Character Atlas
+    </title>
+
+
+
+
+    <!-- ==================================================
+         FONTS
+    =================================================== -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link 
+        href="
+        https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap
+        "
+        rel="stylesheet"
+    >
+
+
+
+
+    <!-- ==================================================
+         BASE CSS
+    =================================================== -->
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/base/variables.css"
+    >
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/base/reset.css"
+    >
+
+
+
+
+    <!-- ==================================================
+         LAYOUT CSS
+    =================================================== -->
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/layout/layout.css"
+    >
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/layout/header.css"
+    >
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/layout/hero.css"
+    >
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/layout/footer.css"
+    >
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/layout/responsive.css"
+    >
+
+
+
+
+    <!-- ==================================================
+         COMPONENT CSS
+    =================================================== -->
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/components/glass.css"
+    >
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/components/buttons.css"
+    >
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/components/cards.css"
+    >
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/components/search.css"
+    >
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/components/badges.css"
+    >
+
+
+
+
+    <!-- ==================================================
+         PAGE CSS
+    =================================================== -->
+
+
+    <link 
+        rel="stylesheet"
+        href="assets/css/pages/home.css"
+    >
+
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- ======================================================
+     HEADER
+======================================================= -->
+
+
+<header id="site-header">
+
+
+    <nav id="navbar" class="glass-panel">
+
+
+        <!-- LOGO -->
+
+        <a 
+            id="logo"
+            href="#"
+        >
+
+            <span id="logo-text">
+                Character Atlas
+            </span>
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+
+        <ul id="nav-menu">
+
+
+            <li>
+                <a href="#featured-novels">
+                    Novels
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#popular-characters">
+                    Characters
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#latest-updates">
+                    Updates
+                </a>
+            </li>
+
+
+        </ul>
+
+
+
+
+        <!-- SEARCH -->
+
+
+        <div 
+            id="search-container"
+            class="search-box"
+        >
+
+
+            <form id="search-form">
+
+
+                <div class="search-input-wrapper">
+
+
+                    <input
+
+                        id="search-input"
+
+                        class="search-input"
+
+                        type="search"
+
+                        placeholder="
+                        Search universe...
+                        "
+
+                    >
+
+
+
+                    <span class="search-icon">
+
+                        🔍
+
+                    </span>
+
+
+
+                </div>
+
+
+
+
+                <button
+
+                    id="search-button"
+
+                    class="btn btn-primary search-submit"
+
+                    type="submit"
+
+                >
+
+                    Search
+
+                </button>
+
+
+
+            </form>
+
+
+
+        </div>
+
+
+
+
+    </nav>
+
+
+</header>
+
+
+
+
+
+
+<!-- ======================================================
+     MAIN CONTENT
+======================================================= -->
+
+
+<main id="main-content">
+
+
+
+
+
+<!-- ======================================================
+     HERO SECTION
+======================================================= -->
+
+
+<section 
+    id="hero"
+    class="home-hero"
+>
+
+
+    <div class="space-grid"></div>
+
+
+
+    <header class="home-hero-content">
+
+
+        <h1>
+
+            Explore Infinite Worlds
+
+        </h1>
+
+
+
+        <p>
+
+            Character Atlas is a visual database
+            connecting characters, civilizations,
+            artifacts, planets and events across
+            fictional universes.
+
+        </p>
+
+
+
+        <div id="hero-actions">
+
+
+            <button
+
+                id="explore-button"
+
+                class="btn btn-primary btn-lg"
+
+            >
+
+                Explore Atlas
+
+
+            </button>
+
+
+
+            <button
+
+                id="browse-button"
+
+                class="btn btn-secondary btn-lg"
+
+            >
+
+                Browse Novels
+
+
+            </button>
+
+
+        </div>
+
+
+
+    </header>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ======================================================
+     FEATURED NOVELS
+======================================================= -->
+
+
+<section
+
+    id="featured-novels"
+
+    class="home-section"
+
+
+>
+
+
+<div class="container">
+
+
+
+<header class="section-header">
+
+
+    <div>
+
+
+        <h2 class="section-title">
+
+            Featured Novels
+
+        </h2>
+
+
+
+        <p class="section-description">
+
+            Explore worlds with complex
+            civilizations and histories.
+
+        </p>
+
+
+    </div>
+
+
+
+</header>
+
+
+
+
+
+<div
+    id="novel-container"
+    class="featured-novel-grid"
+></div>
+
+
+<!-- JavaScript Render Area -->
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ======================================================
+     POPULAR CHARACTERS
+======================================================= -->
+
+
+<section
+
+    id="popular-characters"
+
+    class="home-section"
+
+>
+
+
+<div class="container">
+
+
+
+<header class="section-header">
+
+
+<h2 class="section-title">
+
+    Popular Characters
+
+</h2>
+
+
+</header>
+
+
+
+
+<div
+
+    id="character-container"
+
+    class="character-grid"
+
+>
+
+
+<!-- JavaScript Render Area -->
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ======================================================
+     LATEST UPDATES
+======================================================= -->
+
+
+<section
+
+    id="latest-updates"
+
+    class="home-section"
+
+>
+
+
+<div class="container">
+
+
+
+<header class="section-header">
+
+
+<h2 class="section-title">
+
+    Latest Updates
+
+</h2>
+
+
+</header>
+
+
+
+
+<div
+
+    id="update-container"
+
+    class="update-list"
+
+>
+
+
+<!-- JavaScript Render Area -->
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+<!-- ======================================================
+     FOOTER
+======================================================= -->
+
+
+<footer id="site-footer">
+
+
+
+<div id="footer-about">
+
+
+<h2>
+
+Character Atlas
+
+</h2>
+
+
+<p>
+
+Open source universe visualization project.
+
+</p>
+
+
+</div>
+
+
+
+
+<div id="footer-navigation">
+
+
+<ul>
+
+
+<li>
+<a href="#">
+Home
+</a>
+</li>
+
+
+<li>
+<a href="#">
+GitHub
+</a>
+</li>
+
+
+<li>
+<a href="#">
+Documentation
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div id="footer-info">
+
+
+<p>
+
+© 2026 Character Atlas
+
+</p>
+
+
+</div>
+
+
+
+</footer>
+
+
+
+
+
+
+
+<!-- ======================================================
+     JAVASCRIPT
+     Future Integration
+======================================================= -->
+
+
+<script 
+    type="module"
+    src="assets/js/main.js"
+></script>
+
+
+
+</body>
+
+
+</html>

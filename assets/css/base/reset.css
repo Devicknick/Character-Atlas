@@ -1,0 +1,392 @@
+/* =========================================================
+   CHARACTER ATLAS
+   MODERN CSS RESET
+   ---------------------------------------------------------
+   Base Styles
+   Typography
+   Accessibility
+========================================================= */
+
+
+/* =========================================================
+   BOX MODEL
+========================================================= */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================================================
+   HTML
+========================================================= */
+
+html{
+
+    scroll-behavior:smooth;
+
+    -webkit-text-size-adjust:100%;
+
+    text-size-adjust:100%;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body{
+
+    font-family:var(--font-primary);
+
+    background:var(--color-background);
+
+    color:var(--color-text);
+
+    line-height:var(--line-normal);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:var(--font-heading);
+
+    font-weight:var(--weight-bold);
+
+    line-height:var(--line-tight);
+
+    color:var(--color-text);
+
+}
+
+
+p{
+
+    color:var(--color-text-secondary);
+
+    line-height:var(--line-loose);
+
+}
+
+
+small{
+
+    font-size:var(--text-sm);
+
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    transition:var(--transition-fast);
+
+}
+
+
+a:hover{
+
+    color:var(--color-primary);
+
+}
+
+
+/* =========================================================
+   LISTS
+========================================================= */
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+img,
+picture,
+video,
+canvas,
+svg{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+
+button,
+input,
+textarea,
+select{
+
+    font:inherit;
+
+    color:inherit;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+button{
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+input{
+
+    width:100%;
+
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+textarea{
+
+    resize:vertical;
+
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+table{
+
+    border-collapse:collapse;
+
+    border-spacing:0;
+
+}
+
+
+/* =========================================================
+   HR
+========================================================= */
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:var(--color-border);
+
+}
+
+
+/* =========================================================
+   SECTION SPACING
+========================================================= */
+
+section{
+
+    padding:5rem 0;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+
+    width:min(
+        100% - (var(--container-padding) * 2),
+        var(--container-width)
+    );
+
+    margin-inline:auto;
+
+}
+
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+.text-center{
+
+    text-align:center;
+
+}
+
+
+.flex{
+
+    display:flex;
+
+}
+
+
+.grid{
+
+    display:grid;
+
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:var(--color-background);
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--color-surface-light);
+
+    border-radius:999px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--color-primary);
+
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+::selection{
+
+    background:var(--color-primary);
+
+    color:var(--color-background);
+
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+:focus-visible{
+
+    outline:2px solid var(--color-highlight);
+
+    outline-offset:4px;
+
+}
+
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+button:disabled,
+input:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.5;
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    html{
+
+        scroll-behavior:auto;
+
+    }
+
+    *{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+
+    }
+
+}

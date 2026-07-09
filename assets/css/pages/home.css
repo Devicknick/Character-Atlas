@@ -1,0 +1,538 @@
+/* ==========================================================
+   CHARACTER ATLAS
+   HOMEPAGE STYLE
+   ----------------------------------------------------------
+   Landing Page Composition
+========================================================== */
+
+
+/* ==========================================================
+   GLOBAL HOME SECTION
+========================================================== */
+
+.home-section{
+
+
+    position:relative;
+
+
+    padding-block:
+
+        var(--section-spacing);
+
+
+}
+
+
+
+/* ==========================================================
+   SECTION HEADER
+========================================================== */
+
+.section-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:flex-end;
+
+
+    gap:2rem;
+
+
+    margin-bottom:3rem;
+
+
+}
+
+
+
+.section-title{
+
+
+    font-size:
+
+        clamp(
+
+            2rem,
+
+            4vw,
+
+            3rem
+
+        );
+
+
+    font-weight:
+
+        var(--weight-bold);
+
+
+    color:
+
+        var(--color-white);
+
+
+}
+
+
+
+.section-description{
+
+
+    max-width:600px;
+
+
+    color:
+
+        var(--color-text-secondary);
+
+
+}
+
+
+
+/* ==========================================================
+   HERO HOMEPAGE
+========================================================== */
+
+.home-hero{
+
+
+    position:relative;
+
+
+}
+
+
+
+/* Hero content width */
+
+.home-hero-content{
+
+
+    max-width:
+
+        900px;
+
+
+    margin-inline:auto;
+
+
+}
+
+
+
+/* ==========================================================
+   FEATURED NOVELS
+========================================================== */
+
+#featured-novels{
+
+
+    position:relative;
+
+
+}
+
+
+
+.featured-novel-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+
+        repeat(
+
+            auto-fit,
+
+            minmax(
+
+                300px,
+
+                1fr
+
+            )
+
+        );
+
+
+    gap:
+
+        2rem;
+
+
+}
+
+
+
+/* Featured novel emphasis */
+
+.featured-novel-grid .featured-card{
+
+
+    min-height:
+
+        420px;
+
+
+}
+
+
+
+/* ==========================================================
+   POPULAR CHARACTERS
+========================================================== */
+
+#popular-characters{
+
+
+    position:relative;
+
+
+}
+
+
+
+.character-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+
+        repeat(
+
+            auto-fit,
+
+            minmax(
+
+                250px,
+
+                1fr
+
+            )
+
+        );
+
+
+    gap:
+
+        2rem;
+
+
+}
+
+
+
+/* Character highlight */
+
+.character-grid .character-card{
+
+
+    transition:
+
+        var(--transition-normal);
+
+
+}
+
+
+
+/* ==========================================================
+   LATEST UPDATES
+========================================================== */
+
+#latest-updates{
+
+
+    position:relative;
+
+
+}
+
+
+
+.update-list{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:
+
+        1rem;
+
+
+}
+
+
+
+.update-item{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    gap:1rem;
+
+
+    padding:
+
+        1.25rem;
+
+
+}
+
+
+
+/* Update title */
+
+.update-title{
+
+
+    color:
+
+        var(--color-white);
+
+
+    font-weight:
+
+        var(--weight-semibold);
+
+
+}
+
+
+
+.update-time{
+
+
+    color:
+
+        var(--color-text-secondary);
+
+
+    font-size:
+
+        var(--text-sm);
+
+
+}
+
+
+
+/* ==========================================================
+   HOMEPAGE BACKGROUND DECORATION
+========================================================== */
+
+.home-background{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    pointer-events:none;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+/* Cosmic glow */
+
+.home-background::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:10%;
+
+
+    left:50%;
+
+
+    transform:
+
+        translateX(-50%);
+
+
+    width:800px;
+
+
+    height:800px;
+
+
+    background:
+
+
+        radial-gradient(
+
+            circle,
+
+            rgba(0,229,255,.08),
+
+            transparent 70%
+
+        );
+
+
+    filter:
+
+        blur(50px);
+
+
+}
+
+
+
+/* ==========================================================
+   NOVEL FILTER AREA
+========================================================== */
+
+.novel-filter{
+
+
+    display:flex;
+
+
+    gap:1rem;
+
+
+    flex-wrap:wrap;
+
+
+    margin-bottom:2rem;
+
+
+}
+
+
+
+/* ==========================================================
+   UPDATE TIMELINE STYLE
+========================================================== */
+
+.update-timeline{
+
+
+    position:relative;
+
+
+}
+
+
+
+.update-timeline::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:20px;
+
+
+    top:0;
+
+
+    height:100%;
+
+
+    width:2px;
+
+
+    background:
+
+        rgba(79,195,247,.25);
+
+
+}
+
+
+
+/* ==========================================================
+   FOOTER SECTION SPACING
+========================================================== */
+
+#site-footer{
+
+
+    margin-top:
+
+        var(--section-spacing);
+
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+
+    .section-header{
+
+
+        flex-direction:
+
+            column;
+
+
+        align-items:flex-start;
+
+
+    }
+
+
+
+    .update-item{
+
+
+        flex-direction:
+
+            column;
+
+
+        align-items:flex-start;
+
+
+    }
+
+
+
+}
