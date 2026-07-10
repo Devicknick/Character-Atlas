@@ -1,20 +1,28 @@
-// Jadi tanggung jawabnya hanya:
-
-// menerima data novel
-// mencari container
-// membuat card
-// memasukkan card ke halaman
 /**
  * ==========================================================
  * CHARACTER ATLAS
  * NOVEL RENDERER
  * ----------------------------------------------------------
- * Render featured novels into the homepage.
+ * Render featured novels into homepage.
+ *
+ * Phase 4:
+ * Uses entity normalization layer.
  * ==========================================================
  */
 
-import { createEntityCard } from "./entity-card.js";
-import { renderSection } from "./section-renderer.js";
+
+import { renderEntity }
+from "./entity-renderer.js";
+
+
+import { renderSection }
+from "./section-renderer.js";
+
+
+import { normalizeEntity }
+from "../utils/entity.js";
+
+
 
 /**
  * Render featured novels.
@@ -23,24 +31,69 @@ import { renderSection } from "./section-renderer.js";
  */
 export function renderNovels(novels) {
 
-    const featuredNovels = novels.filter(
-        novel => novel.featured === true
-    );
+
+
+    const featuredNovels =
+
+        novels.filter(
+
+            novel =>
+
+                novel.featured === true
+
+        );
+
+
+
+    const normalizedNovels =
+
+        featuredNovels.map(
+
+            novel =>
+
+                normalizeEntity(
+                    novel,
+                    "novel"
+                )
+
+        );
+
+
+
+    /*
+    ==================================================
+    PHASE 4 CHANGE
+
+    Flow:
+
+    novels.json
+
+        ↓
+
+    filter featured
+
+        ↓
+
+    normalizeEntity()
+
+        ↓
+
+    renderEntity()
+
+
+    ==================================================
+    */
+
 
     renderSection(
+
         "#novel-container",
-        featuredNovels,
-        (novel) => createEntityCard({
 
-            title: novel.title,
+        normalizedNovels,
 
-            description: novel.description,
+        renderEntity
 
-            image: novel.cover,
-
-            status: novel.status
-
-        })
     );
+
 
 }

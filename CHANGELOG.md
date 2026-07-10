@@ -36,7 +36,7 @@ Phase 2 - Renderer Engine
 
 Phase 3
 ──────────────────────────────
-Utilities & Core Infrastructure
+✅ Utilities & Core Infrastructure
 
 Phase 4
 ──────────────────────────────
